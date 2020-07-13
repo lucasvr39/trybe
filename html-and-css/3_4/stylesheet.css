@@ -1,0 +1,70 @@
+* {
+  font-family: monospace;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+h1 {
+
+
+}
+
+.header {
+  background-color: #709255;
+  color: white;
+  padding: 20px;
+}
+
+.navigation ul{
+  display: flex;;
+}
+
+.navigation a {
+  text-decoration: none;
+}
+
+.navigation li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.science-info {
+  padding: 20px;
+}
+
+.science-table, td {
+  padding: 15px;
+}
+]
+
+img {
+  float: left;
+  width: 5%;
+  padding: 10px;
+}
+
+.first-fact {
+  padding: 20px;
+}
+
+.second-fact {
+  padding: 20px;
+}
+
+.sidebar {
+  padding: 20px;
+}
+
+.footer {
+  padding: 20px;
+}
+
+strong {
+  color: forestgreen;
+}
+
+span {
+  font-weight: 700;
+  text-decoration: underline;
+  color: forestgreen;
+}
