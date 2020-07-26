@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title>Calculator</title>
+</head>
+
+<body>
+
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+  <br><br>
+
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+  <br><br>
+
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+  <br><br>
+
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button>
+  <br><br>
+  <div id="solution"></div>
+
+  <script>
+
+    // functions to calc outputs
+
+    function squareNumber() {
+      let outputSolution = document.getElementById('solution');
+      let squareToCalc = document.getElementById('square-input').value;
+      let squareN = squareToCalc * squareToCalc;
+      outputSolution.innerHTML = `The result of squaring the number ${squareToCalc} is ${squareN}.`; 
+    }
+
+    function halfNumber() {
+      let outputSolution = document.getElementById('solution');
+      let halfToCalc = document.getElementById('half-input').value;
+      let halfN = halfToCalc / 2;
+      outputSolution.innerHTML = `Half of ${halfToCalc} is ${halfN}..`; 
+    }
+
+    function percentOf() {
+      let outputSolution = document.getElementById('solution');
+      let percent1ToCalc = document.getElementById('percent1-input').value;
+      let percent2ToCalc = document.getElementById('percent2-input').value;
+      let percentN = (percent1ToCalc / percent2ToCalc) * 100;
+      outputSolution.innerHTML = `${percent1ToCalc} is ${percentN}% of ${percent2ToCalc}`; 
+    }
+
+    function areaOfCircle() {
+      let outputSolution = document.getElementById('solution');
+      let radiusToCalcArea = document.getElementById('area-input').value;
+      let areaN = Math.round((radiusToCalcArea * radiusToCalcArea) * 3.14);
+      outputSolution.innerHTML = `The area for a circle with radius ${radiusToCalcArea} is ${areaN}.`; 
+    }
+
+    // variables to get the buttons
+
+    let btnSquareToCalc = document.getElementById('square-button');
+    let btnHalfToCalc = document.getElementById('half-button')
+    let btnPercentToCalc = document.getElementById('percent-button')
+    let btnAreaToCalc = document.getElementById('area-button')
+
+    // add events to buttons
+
+    btnSquareToCalc.addEventListener('click', squareNumber);
+    btnSquareToCalc.addEventListener('keyup', squareNumber);
+
+    btnHalfToCalc.addEventListener('click', halfNumber);
+    btnHalfToCalc.addEventListener('keyup', halfNumber);
+
+    btnPercentToCalc.addEventListener('click', percentOf);
+    btnPercentToCalc.addEventListener('keyup', percentOf);
+
+    btnAreaToCalc.addEventListener('click', areaOfCircle);
+    btnAreaToCalc.addEventListener('keyup', areaOfCircle);
+
+
+
+  </script>
+
+  <!-- Add a script tag, and add the functions from the calculator exercise (view the solution if you haven't done it yet).
+  For each operation, create an event listener for the button, and when it's clicked, find the value of the appropriate
+  input and show the result of the calculation in the solution div.
+  Bonus: respond to key presses so that the user doesn't have to click the button. -->
+
+
+</body>
+
+</html>
