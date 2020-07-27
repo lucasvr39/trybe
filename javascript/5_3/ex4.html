@@ -1,39 +1,85 @@
 <!DOCTYPE html>
 <html>
- <head>
+
+<head>
   <meta charset="utf-8" />
   <title>Cat Walk</title>
- </head>
- <body>
-  
-  <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
-  
- </body>
- <script>
-   
-   // ex 1
-   const catImg = document.querySelector('img');
-   catImg.style.marginLeft = '0px';
+</head>
 
-  //  setInterval(function catWalk() {
-  //    let windowLimit = innerWidth;
-  //    let addMargin = parseInt(catImg.style.marginLeft) + 10;
-  //    if (addMargin < windowLimit) {
-  //     catImg.style.marginLeft = addMargin + 'px';
-  //   } }, 50)
+<body>
+
+  <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+
+</body>
+<script>
+
+  // ex 1
+
+  const catImg = document.querySelector('img');
+  catImg.style.marginLeft = '0px';
+  var windowLimit = window.innerWidth - catImg.width;
+
+  // setInterval(function catWalk() {
+  //   let margin = parseInt(catImg.style.marginLeft);
+  //   if (margin < windowLimit) {
+  //     catImg.style.marginLeft = (margin + 10) + 'px';
+  //   }
+  // }, 50)
 
   // bonus 1
 
-  setInterval(function catWalk() {
-     let windowLimit = innerWidth;
-     let addMargin = parseInt(catImg.style.marginLeft) + 10;
-     if (addMargin < windowLimit) {
-      catImg.style.marginLeft = addMargin + 'px';
-    } else {
-      catImg.style.marginLeft = '0px';
-    } }, 50)
+  // setInterval(function catWalk() {
+  //   let margin = parseInt(catImg.style.marginLeft);
+  //   if (margin < windowLimit) {
+  //     catImg.style.marginLeft = (margin + 10) + 'px';
+  //   } else {
+  //     catImg.style.marginLeft = '0px';
+  //   }
+  // }, 50)
 
- </script>
+  // bonus 2
+
+  
+  var walkLeft = true;
+  
+  function catWalk() {
+    let margin = parseInt(catImg.style.marginLeft);
+
+    if (walkLeft && margin > windowLimit) {
+      walkLeft = false;
+    }
+
+    if (!walkLeft && margin <= 0) {
+      walkLeft = true;
+    }
+
+    if (walkLeft) {
+      catImg.style.marginLeft = (margin + 10) + 'px';
+    } else {
+      catImg.style.marginLeft = (margin - 10) + 'px';
+    }
+  }
+
+  setInterval(catWalk, 50);
+
+  // bonus 3
+
+  // var dancing = false;
+
+  // function catDancing() {
+  //   let margin = parseInt(catImg.style.marginLeft);
+  //   if (!dancing && margin >= (windowLimit / 2)){
+  //     dancing = true;
+  //   }
+  //   if (dancing) {
+  //    catImg.src = 'https://media.giphy.com/media/GmXMpIy7yhlD2/giphy.gif';
+  //   }
+  // }
+
+  // setTimeout(catDancing, 10000);
+
+</script>
+
 </html>
 
 <!-- Add a script tag at the bottom of the page, where you'll put all your code.
