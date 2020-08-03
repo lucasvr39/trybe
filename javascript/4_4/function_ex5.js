@@ -1,15 +1,20 @@
-var array = [2, 3, 2, 5, 8, 2, 3];
-
 function countFrequency(array) {
-  var count = 0;
+  let count = 0;
+  let countNumber = 0;
+  let indexNumber = 0;
 
   for (let i = 0; i < array.length; i += 1) {
-    for (let j = 0; j < i; j += 1) {
-      if (array[i] === array[j])
-        count += 1;
+    const checkNumber = array[i];
+    for (let j = 0; j < array.length; j += 1) {
+      if (checkNumber === array[j]) count += 1;
     }
+    if (countNumber > count) {
+      count = countNumber;
+      indexNumber = i;
+    }
+    countNumber = 0;
   }
-  return count;
+  return array[indexNumber];
 }
 
-console.log(countFrequency(array));
+console.log(countFrequency([2, 3, 2, 5, 8, 2, 3]));
