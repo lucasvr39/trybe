@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<button id="background">Change Page's Background Color</button>
+<button id="font-color">Change Page's Font Color</button>
+<button id="font-size">Change Page's Font Size</button>
+<button id="font-family">Change Page's Font family</button>
+<button id="line-height">Change Page's Lines Height</button>
+  <div id="content">
+    <h1>What is Lorem Ipsum?</h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+      dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+      book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+      recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+    <h2>Where does it come from?</h2>
+      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+      from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+      looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of
+      the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
+      of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise
+      on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+      amet..", comes from a line in section 1.10.32.
+      
+      The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and
+      1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by
+      English versions from the 1914 translation by H. Rackham.</p>
+  </div>
+</body>
+
+<script>
+  const btnBgColor = document.getElementById('background');
+  const btnFontColor = document.getElementById('font-color');
+  const btnFontSize = document.getElementById('font-size');
+  const btnFontFamily = document.getElementById('font-family');
+  const btnLineHeight = document.getElementById('line-height');
+  const bodyElement = document.getElementsByTagName('body');
+  const contentElement = document.getElementById('content');
+
+  btnBgColor.addEventListener('click', () => {
+      bodyElement[0].style.backgroundColor = 'green';
+      localStorage.setItem('background-color', 'green');
+    });
+  
+  btnFontColor.addEventListener('click', () => {
+      contentElement.style.color = 'white';
+      localStorage.setItem('font-color', 'white');
+    });
+
+  btnFontSize.addEventListener('click', () => {
+      contentElement.style.fontSize = '20px';
+      localStorage.setItem('font-size', '20px');
+    });
+
+  btnFontFamily.addEventListener('click', () => {
+      contentElement.style.fontFamily = 'monospace';
+      localStorage.setItem('font-family', 'monospace');
+    });
+
+  btnLineHeight.addEventListener('click', () => {
+      contentElement.style.lineHeight = '30px';
+      localStorage.setItem('line-height', '30px');
+    });
+
+bodyElement[0].style.backgroundColor = localStorage.getItem('background-color');
+contentElement.style.color = localStorage.getItem('font-color');
+contentElement.style.fontSize = localStorage.getItem('font-size');
+contentElement.style.fontFamily = localStorage.getItem('font-family');
+contentElement.style.lineHeight = localStorage.getItem('line-height');
+
+</script>
+
+</html>
+
+<!-- people should have permission to change:
+- background color
+- font color
+- font size
+- lines height
+- font family
+all changes has to be saved -->
