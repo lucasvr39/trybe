@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>WORK WITH US</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="speaker-form-header">
+    <h1>Work HERE</h1>
+    <p><em>Do you want to work with us? Tell us about you!</em></p>
+  </header>
+
+  <!-- FORM -->
+  <form method="GET" id="myForm" class="speaker-form">
+    <fieldset>
+      <div class="form-row">
+        <!-- PERSONAL INFORMATION -->
+        <div class="line-content">
+          <label for="full-name">Name:</label>
+          <input
+            name="full-name"
+            type="text"
+            id="full-name"
+            maxlength="40"
+            required
+          />
+        </div>
+        <div class="line-content">
+          <label for="email">Email:</label>
+          <input
+            name="email"
+            type="text"
+            id="email"
+            maxlength="50"
+            required
+          />
+        </div>
+        <div class="line-content">
+          <label for="social-security">Social Security:</label>
+          <input
+            name="social-security"
+            type="text"
+            id="social-security"
+            maxlength="11"
+            required
+          />
+        </div>
+        <div class="line-content">
+          <label for="address">Address:</label>
+          <input
+            name="address"
+            type="text"
+            id="address"
+            maxlength="200"
+            required
+          />
+        </div>
+        <div class="line-content">
+          <label for="city">City:</label>
+          <input name="city" type="text" id="city" maxlength="28" required />
+        </div>
+        <div class="line-content">
+          <label for="state">State:</label>
+          <select name="state" id="state">
+            <!-- OPTIONS CREATED BY JS -->
+          </select>
+        </div>
+      </div>
+    </fieldset>
+    <!-- ADDRESS BUILDING -->
+    <div class="line-content">
+      <fieldset class="address-type-fieldset">
+        <legend>Address Building</legend>
+        <input
+          type="radio"
+          name="address-type"
+          id="address-type-home"
+          value="home"
+        />
+        <label for="address-type-home">Home</label>
+
+        <input
+          type="radio"
+          name="address-type"
+          id="address-type-work"
+          value="work"
+        />
+        <label for="address-type-work">Work</label>
+      </fieldset>
+    </div>
+
+    <!-- PROFESSIONAL INFORMATION -->
+    <fieldset>
+      <div class="form-row">
+        <div class="line-content">
+          <label for="resume">Resumé:</label>
+          <textarea
+            name="resume"
+            placeholder="Paste your resumé here:"
+            id="resume"
+            maxlength="1000"
+            required
+          ></textarea>
+        </div>
+        <div class="line-content">
+          <label for="role">Role:</label>
+          <input
+            name="role"
+            type="text"
+            id="role"
+            maxlength="1000"
+            required
+          />
+        </div>
+        <div class="line-content">
+          <label for="role-description">Job Description:</label>
+          <input
+            name="role-description"
+            type="text"
+            id="role-description"
+            maxlength="500"
+            required
+          />
+        </div>
+        <div class="line-content">
+          <label for="start-date">Start Date:</label>
+          <input
+            name="start-date"
+            type="text"
+            id="date"
+            maxlength="10"
+            required
+          />
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- BUTTONS -->
+    <div class="line-content">
+      <button id="submit" type="submit">Submit</button>
+      <button id="btnClear">Delete</button>
+    </div>
+  </form>
+
+  <!-- CONSOLIDATE INPUT -->
+  <div id="consolidate" style="text-align: center;"></div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
