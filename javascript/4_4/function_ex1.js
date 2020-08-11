@@ -1,16 +1,13 @@
-var isPalindrome = "SAIPPUAKIVIKAUPPIAS";
-
 function checkPalindrome(isPalindrome) {
-  var invertPalindrome = "";
+  let invertPalindrome = '';
 
   for (let i = isPalindrome.length; i > 0; i -= 1) {
-    invertPalindrome = invertPalindrome + isPalindrome[i - 1];
+    invertPalindrome += isPalindrome[i - 1];
   }
   if (invertPalindrome === isPalindrome) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
-console.log(checkPalindrome(isPalindrome));
+console.log(checkPalindrome('SAIPPUAKIVIKAUPPIAS'));

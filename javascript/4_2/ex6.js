@@ -1,4 +1,4 @@
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+const numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let oddCount = 0;
 
 for (let i = 0; i < numbers.length; i += 1) {
@@ -8,7 +8,7 @@ for (let i = 0; i < numbers.length; i += 1) {
 }
 
 if (oddCount === 0) {
-  console.log("no odd values found");
+  console.log('no odd values found');
 } else {
   console.log(oddCount);
 }

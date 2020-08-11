@@ -1,7 +1,7 @@
-var info = {
-  personagem: "Margarida",
-  origem: "Pato Donald",
-  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
+const info = {
+  personagem: 'Margarida',
+  origem: 'Pato Donald',
+  nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
 };
 
-console.log("Welcome, " + info.personagem);
+console.log(`Welcome, ${info.personagem}`);

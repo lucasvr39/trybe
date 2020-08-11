@@ -1,15 +1,15 @@
-var names = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
-
 function biggestName(nameArray) {
-  var name = "";
+  let name = '';
 
-  for (position in nameArray) {
-    if (nameArray[position].length > name.length) {
-      name = nameArray[position];
+  for (let index = 0; index < nameArray.length; index += 1) {
+    if (nameArray[index].length > name.length) {
+      name = nameArray[index];
     }
   }
 
   return name;
 }
 
-console.log(biggestName(names));
+console.log(
+  biggestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'])
+);

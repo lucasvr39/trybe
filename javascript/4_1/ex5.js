@@ -1,10 +1,10 @@
-let angleA = 90;
-let angleB = 30;
-let angleC = 60;
+const angleA = 90;
+const angleB = 30;
+const angleC = 60;
 
-let sumAngles = angleA + angleB + angleC;
+const sumAngles = angleA + angleB + angleC;
 
-let tipo = typeof sumAngles;
+const tipo = typeof sumAngles;
 
 switch (tipo) {
   case 'number':
@@ -15,6 +15,6 @@ switch (tipo) {
     }
     break;
   default:
-    console.log("Error!");
+    console.log('Error!');
     break;
 }

@@ -1,12 +1,10 @@
-
 function checkEndingWord(word, ending) {
-  var compareString = word[word.length - 2] + word[word.length - 1];
+  const compareString = word[word.length - 2] + word[word.length - 1];
 
   if (compareString === ending) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
-console.log(checkEndingWord("trybe", "be"));
+console.log(checkEndingWord('trybe', 'be'));

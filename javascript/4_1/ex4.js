@@ -1,7 +1,7 @@
-var a = 0;
+const a = 0;
 
 if (a > 0) {
-  console.log("positive");
+  console.log('positive');
 } else {
-  console.log("negative");
+  console.log('negative');
 }

@@ -1,15 +1,13 @@
-var array = [2, 3, 6, 7, 10, 1, -3];
-
 function highestArrayValue(array) {
-  var smallestValue = 0
+  let smallestValue = 0;
 
-  for (value in array) {
-    if (array[value] < smallestValue) {
-      smallestValue = array[value];
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] < smallestValue) {
+      smallestValue = array[index];
     }
   }
 
   return smallestValue;
 }
 
-console.log(highestArrayValue(array));
+console.log(highestArrayValue([2, 3, 6, 7, 10, 1, -3]));

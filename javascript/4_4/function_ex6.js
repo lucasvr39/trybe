@@ -1,12 +1,10 @@
-var n = 5;
-
 function sum(n) {
-  var sumResult = n;
+  let sumResult = n;
 
-  for (i = 0; i < n; i += 1) {
-    sumResult = sumResult + i;
+  for (let i = 0; i < n; i += 1) {
+    sumResult += i;
   }
   return sumResult;
 }
 
-console.log(sum(n));
+console.log(sum(5));
