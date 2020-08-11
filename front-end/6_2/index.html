@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <!-- To initialize select options -->
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.js"></script><style type="text/css"></style>
+  <script type="text/javascript">
+    window.onload=function(){
+    $(document).ready(function() {
+        $('select').material_select();
+    });
+    }
+  </script>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- materialize compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- materialize compiled and minified JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>   
+  <!-- PIKADAY style file -->
+  <link rel="stylesheet" type="text/css" href="src/pikaday.css">
+</head>
+
+<body class="valign-wrapper">
+  <div class="row">
+    <!-- FORM -->
+    <form id="myForm" method="GET" class="col s12 job-form">
+
+      <!-- PERSONAL INFORMATION -->
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="name" name="name" type="text" maxlength="40" class="validate" required>
+          <label for="name">Name:</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" name="email" type="email" maxlength="50" class="validate" data-validate-field="email">
+          <label for="email">Your Email:</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="cpf" name="cpf" type="text" maxlength="11" required>
+          <label for="cpf">Social Security:</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="address" name="address" type="text" maxlength="200" required>
+          <label for="address">Home Address:</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="city" name="city" type="text" maxlength="28" required>
+          <label for="city">City:</label>
+        </div>
+      </div>
+
+      <!-- SELECT STATE INPUT -->
+      <div class="row">
+        <div class="input-field col s12">
+          <select id="state" name="state" type="text" required>
+            <!-- option generate by script -->
+          </select>
+          <label for="state">State:</label>
+        </div>
+      </div>
+
+      <!-- RADIO BUILDING INPUT -->
+      <div class="row">
+        <div class="input-field col s12">
+          <p>
+            <label for="home">
+              <input id="home" class="with-gap" name="type" type="radio" value="Home" required/>
+              <span>Home</span>
+            </label>
+          </p>
+          <p>
+            <label for="building">
+              <input id="building" class="with-gap" name="type" type="radio" value="Building" required/>
+              <span>Building</span>
+            </label>
+          </p>
+          <p>
+            <label for="work">
+              <input id="work" class="with-gap" name="type" type="radio" value="Work" required/>
+              <span>Work</span>
+            </label>
+          </p>
+      </div>
+      </div>
+
+      <!-- PROFESSIONAL INFORMATION -->
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="resume" name="resume" maxlength="1000" placeholder="Paste your resumé here" required></textarea>
+          <label for="resume">Resumé:</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="role" name="role" type="text" maxlength="40" required>
+          <label for="role">Job Role:</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="role-description" name="role-description" type="text" maxlength="500" required>
+          <label for="role-description">Role Description:</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="datepicker" name="date" type="text" required>
+          <label for="date">Start Date:</label>
+        </div>
+      </div>
+      <div>
+        <button id="submit" class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+        <button id="btnClear" class="btn waves-effect waves-light">Delete All
+          <i class="material-icons right"></i>
+        </button>
+      </div>
+    </form>
+
+    <!-- CONSOLIDATE -->
+    <div id="consolidate">
+      <!-- input -->
+    </div>
+  </div>
+</body>
+<!-- just-validate min file -->
+<script type="text/javascript" src="src/just-validate.js"></script>
+<!-- pikaday min file -->
+<script type="text/javascript" src="src/pikaday.js"></script>
+<!-- page onload pikaday and just-validate -->
+<script>
+  window.onload = function () {
+  // initialize pikaday
+  var picker = new Pikaday({ field: document.getElementById('datepicker') });
+
+  // initialize just-validate and set rules
+  new window.JustValidate('.job-form');
+  new window.JustValidate('.job-form', {
+    rules: {
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      email: 'Insert a valid email address',
+      required: 'This field is required'
+    },
+
+    submitHandler: function (form, values) {
+      console.log(form, values);
+    },
+  });
+  }
+</script>
+<script type="text/javascript" src="script.js"></script>
+
+</html>
