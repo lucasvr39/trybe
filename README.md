@@ -2,7 +2,7 @@
 
 Repository for store and manage coding exercises and projects from Trybe's course. Lessons exercises and projects organized by folder.
 
-Trybe is a school of the future and for the future that was founded with the purpose of generating significant opportunities for anyone who wants to improve their lives and build a successful career in technology.
+_Trybe is a school of the future and for the future that was founded with the purpose of generating significant opportunities for anyone who wants to improve their lives and build a successful career in technology._
 
 Making a genuine commitment to people, our students only start paying when they find a good job.
 
@@ -32,7 +32,7 @@ Visit us [betrybe.com](http://betrybe.com/ 'betrybe')
 - 3-2: _HTML & CSS - Getting Started with CSS_
 - 3-3: _HTML & CSS - Selectors and positioning_
 - 3-4: _Semantic HTML_
-- 3-5: _[Project - HTML & CSS](https://Stefano020.github.io/Projeto-01-Learned-Lessons/)_
+- 3-5: _Project - HTML & CSS_
 
 ##### Block 4: Introduction - JavaScript
 
