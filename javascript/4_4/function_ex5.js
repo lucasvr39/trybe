@@ -8,8 +8,8 @@ function countFrequency(array) {
     for (let j = 0; j < array.length; j += 1) {
       if (checkNumber === array[j]) count += 1;
     }
-    if (countNumber > count) {
-      count = countNumber;
+    if (count > countNumber) {
+      countNumber = count;
       indexNumber = i;
     }
     countNumber = 0;
