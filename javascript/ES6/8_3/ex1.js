@@ -1,0 +1,12 @@
+const assert = require('assert');
+
+const arrays = [['1', '2', '3'], [true], [4, 5, 6]];
+
+// concat to creat just one array
+function flatten() {
+  return arrays.reduce((acc, currentValue) => acc.concat(currentValue), []);
+}
+
+console.log(flatten());
+
+assert.deepEqual(flatten(), ['1', '2', '3', true, 4, 5, 6]);
